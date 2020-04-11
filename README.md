@@ -1,2 +1,2 @@
 # alpine-bioperl
-Tentative bioperl container based on alpine linux
+Tentative bioperl singularity container, based on alpine linux
