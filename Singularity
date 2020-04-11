@@ -10,6 +10,7 @@ From: alpine:latest
 	apk update && apk upgrade \
 	&& apk add --no-cache sudo build-base curl wget \
 	perl \
+	perl-doc \
 	perl-utils \
 	perl-dev \
 	perl-dbd-pg \
