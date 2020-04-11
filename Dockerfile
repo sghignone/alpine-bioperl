@@ -1,13 +1,9 @@
-Bootstrap: docker
-From: alpine:latest
+FROM alpine:latest
 
+LABEL	maintainer="Stefano Ghignone, IPSP-CNR, Turin, Italy, stefano.ghignone[at]ipsp.cnr.it"
+LABEL	version="1.7.7"
 
-%labels
-	author Stefano Ghignone
-	maintainer sghignone
-	version 1.7.7
-%post
-	apk update && apk upgrade \
+RUN	apk update && apk upgrade \
 	&& apk add --no-cache sudo build-base curl wget \
 	perl \
 	perl-doc \
@@ -20,6 +16,5 @@ From: alpine:latest
 	libxml2-dev \
 	libxslt-dev
 	
-	#testing dependencies
-	curl -L http://cpanmin.us | perl - --sudo App::cpanminus
-	cpanm --quiet --notest Bundle::BioPerl Parallel::ForkManager Tree BioPerl
+RNN	curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+RUN	cpanm --quiet --notest Bundle::BioPerl Parallel::ForkManager Tree BioPerl
