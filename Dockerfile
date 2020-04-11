@@ -16,5 +16,5 @@ RUN	apk update && apk upgrade \
 	libxml2-dev \
 	libxslt-dev
 	
-RNN	curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+RUN	curl -L http://cpanmin.us | perl - --sudo App::cpanminus
 RUN	cpanm --quiet --notest Bundle::BioPerl Parallel::ForkManager Tree BioPerl
